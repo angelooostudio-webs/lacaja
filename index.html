@@ -8,11 +8,11 @@
 <meta property="og:type" content="website" />
 <meta property="og:title" content="LA CAJA — Catálogo de Vinilos · Angelo Studio" />
 <meta property="og:description" content="Reserva tus vinilos para FACE A. Navega el catálogo de Angelo Studio y apárta el tuyo antes del evento." />
-<meta property="og:image" content="../face-a ANGELO/assets-2/FACE RECORD.png" />
+<meta property="og:image" content="assets-2 copy/FACE RECORD.png" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="LA CAJA — Catálogo de Vinilos · Angelo Studio" />
-<meta name="twitter:image" content="../face-a ANGELO/assets-2/FACE RECORD.png" />
-<link rel="icon" type="image/x-icon" href="../face-a ANGELO/assets-2/DIGI DREAM.avif" />
+<meta name="twitter:image" content="assets-2 copy/FACE RECORD.png" />
+<link rel="icon" type="image/x-icon" href="assets-2 copy/DIGI DREAM.avif" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
@@ -577,6 +577,25 @@ footer{
       </div>
 
       <form id="purchaseForm" novalidate>
+
+        <!-- PAYMENT INFO — always visible at top -->
+        <div style="margin-bottom:1.5rem;border:1px solid rgba(232,168,152,0.2);padding:1.2rem">
+          <p style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--blush);margin-bottom:0.8rem">Envía el pago ahora</p>
+          <p style="font-size:0.72rem;color:var(--muted);line-height:2;letter-spacing:0.04em">
+            <span style="color:var(--cream);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase">Plataforma</span><br>
+            <strong style="color:var(--cream)">Nequi</strong><br><br>
+            <span style="color:var(--cream);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase">Nombre</span><br>
+            <strong style="color:var(--cream)">Miguel Gibbs</strong><br><br>
+            <span style="color:var(--cream);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase">Número de banco</span><br>
+            <strong style="font-family:'spalla',sans-serif;font-size:1.4rem;letter-spacing:0.1em;color:var(--blush)">311 695 5922</strong><br><br>
+            <span style="color:var(--cream);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase">Valor a pagar</span><br>
+            <strong id="summaryPrice" style="font-family:'spalla',sans-serif;font-size:1.4rem;letter-spacing:0.1em;color:var(--blush)"></strong>
+          </p>
+          <p style="font-size:0.62rem;color:var(--muted);margin-top:0.8rem;line-height:1.6">
+            En el mensaje de Nequi escribe tu <strong style="color:var(--cream)">nombre completo</strong>.
+          </p>
+        </div>
+
         <div class="form-group">
           <label class="form-label" for="fieldName">Tu nombre completo (legal)</label>
           <input class="form-input" type="text" id="fieldName" placeholder="Como aparece en tu cédula" required />
@@ -593,22 +612,16 @@ footer{
           <span class="form-error" id="errWhatsapp">Campo requerido</span>
         </div>
 
-        <!-- PAYMENT SUMMARY — shown after all fields filled -->
-        <div id="paymentSummary" style="display:none;margin-bottom:1.2rem;border:1px solid rgba(232,168,152,0.2);padding:1.2rem">
-          <p style="font-size:0.58rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--blush);margin-bottom:0.8rem">Envía el pago ahora</p>
-          <p style="font-size:0.72rem;color:var(--muted);line-height:2;letter-spacing:0.04em">
-            <span style="color:var(--cream);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase">Plataforma</span><br>
-            <strong style="color:var(--cream)">Nequi</strong><br><br>
-            <span style="color:var(--cream);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase">Nombre</span><br>
-            <strong style="color:var(--cream)">Miguel Gibbs</strong><br><br>
-            <span style="color:var(--cream);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase">Número</span><br>
-            <strong style="font-family:'spalla',sans-serif;font-size:1.4rem;letter-spacing:0.1em;color:var(--blush)">311 695 5922</strong><br><br>
-            <span style="color:var(--cream);font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase">Valor a pagar</span><br>
-            <strong id="summaryPrice" style="font-family:'spalla',sans-serif;font-size:1.4rem;letter-spacing:0.1em;color:var(--blush)"></strong>
-          </p>
-          <p style="font-size:0.62rem;color:var(--muted);margin-top:0.8rem;line-height:1.6">
-            En el mensaje de Nequi escribe tu <strong style="color:var(--cream)">nombre completo</strong>.
-          </p>
+        <!-- TRANSFER CONFIRMATION CHECKBOX -->
+        <div style="margin-bottom:1.4rem;padding:1rem;border:1px solid rgba(232,168,152,0.25);background:rgba(232,168,152,0.05)">
+          <label style="display:flex;gap:0.8rem;align-items:flex-start;cursor:pointer">
+            <input type="checkbox" id="transferCheck" style="margin-top:0.2rem;accent-color:var(--blush);width:1rem;height:1rem;flex-shrink:0" />
+            <span style="font-size:0.65rem;letter-spacing:0.06em;color:var(--cream);line-height:1.6">
+              <strong style="color:var(--blush);display:block;margin-bottom:0.3rem">¿Ya transferiste el pago?</strong>
+              Debes pagar <em>antes</em> de enviar tu solicitud. Si nuestros verificadores no ven la transferencia entrante, tu reserva será <strong>rechazada</strong> y el vinilo quedará disponible de nuevo.
+            </span>
+          </label>
+          <span class="form-error" id="errTransfer" style="display:none;margin-top:0.5rem">Debes confirmar que ya realizaste el pago</span>
         </div>
 
         <button type="submit" class="btn-submit" id="btnSubmit">Confirmar reserva</button>
@@ -1563,21 +1576,21 @@ const CATALOG = [
 
 // vinyl image paths from FACE A assets
 const VINYL_IMGS = [
-  '../face-a ANGELO/assets-2/Blue Wave.avif',
-  '../face-a ANGELO/assets-2/Cyan Pop.avif',
-  '../face-a ANGELO/assets-2/Digi Dream.avif',
-  '../face-a ANGELO/assets-2/Dog.avif',
-  '../face-a ANGELO/assets-2/Dune.avif',
-  '../face-a ANGELO/assets-2/Gold.avif',
-  '../face-a ANGELO/assets-2/Goth.avif',
-  '../face-a ANGELO/assets-2/Green Mess.avif',
-  '../face-a ANGELO/assets-2/Light Blue.avif',
-  '../face-a ANGELO/assets-2/Orange.avif',
-  '../face-a ANGELO/assets-2/Pink Sharp.avif',
-  '../face-a ANGELO/assets-2/Popsicle.avif',
-  '../face-a ANGELO/assets-2/Record Mess.avif',
-  '../face-a ANGELO/assets-2/Tri.avif',
-  '../face-a ANGELO/assets-2/White.avif',
+  'assets-2 copy/BLUE WAVE.avif',
+  'assets-2 copy/CYAN POP.avif',
+  'assets-2 copy/DIGI DREAM.avif',
+  'assets-2 copy/DOG.avif',
+  'assets-2 copy/DUNE.avif',
+  'assets-2 copy/GOLD.avif',
+  'assets-2 copy/GOTH.avif',
+  'assets-2 copy/GREEN MESS.avif',
+  'assets-2 copy/LIGHT BLUE.avif',
+  'assets-2 copy/ORANGE.avif',
+  'assets-2 copy/PINK SHARP.avif',
+  'assets-2 copy/POPSICLE.avif',
+  'assets-2 copy/RECORD MESS.avif',
+  'assets-2 copy/TRI.avif',
+  'assets-2 copy/WHITE.avif',
 ];
 
 // Build tickers
@@ -1720,15 +1733,7 @@ document.getElementById('searchInput').addEventListener('input', e => {
 
 // ── FIELD WATCHERS — show payment summary when all filled ────────────────────
 function checkFieldsFilled() {
-  const name     = document.getElementById('fieldName').value.trim();
-  const cedula   = document.getElementById('fieldCedula').value.trim();
-  const whatsapp = document.getElementById('fieldWhatsapp').value.trim();
-  const summary  = document.getElementById('paymentSummary');
-  if (name && cedula && whatsapp) {
-    summary.style.display = 'block';
-  } else {
-    summary.style.display = 'none';
-  }
+  // payment info is always visible now — nothing to toggle
 }
 document.getElementById('fieldCedula').addEventListener('keypress', function(e) {
   if (!/[0-9]/.test(e.key)) e.preventDefault();
@@ -1758,7 +1763,7 @@ function openModal(id) {
   document.getElementById('purchaseForm').reset();
   document.getElementById('errName').classList.remove('show');
   document.getElementById('errCedula').classList.remove('show');
-  document.getElementById('paymentSummary').style.display = 'none';
+  document.getElementById('errTransfer').style.display = 'none';
   document.getElementById('formState').style.display = 'block';
   document.getElementById('successState').classList.remove('show');
   document.getElementById('btnSubmit').disabled = false;
@@ -1786,6 +1791,12 @@ document.getElementById('purchaseForm').addEventListener('submit', e => {
   let valid = true;
   if (!name)      { document.getElementById('errName').classList.add('show');     valid = false; }
   else              document.getElementById('errName').classList.remove('show');
+  const transferred = document.getElementById('transferCheck').checked;
+  if (!transferred) {
+    document.getElementById('errTransfer').style.display = 'block';
+    return;
+  }
+  document.getElementById('errTransfer').style.display = 'none';
   const cedulaValid = /^\d{9,10}$/.test(cedula);
   if (!cedulaValid) { document.getElementById('errCedula').classList.add('show');   valid = false; }
   else               document.getElementById('errCedula').classList.remove('show');
@@ -1805,7 +1816,7 @@ document.getElementById('purchaseForm').addEventListener('submit', e => {
       id: currentId,
       artista: r[3],
       album: r[4],
-      precio: fmtCOP(r[1]),
+      precio: r[1],
       nombre: name,
       cedula,
       whatsapp

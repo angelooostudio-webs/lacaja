@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>LA CAJA — Admin</title>
-<link rel="icon" type="image/avif" href="../face-a ANGELO/assets-2/CYAN POP.avif" />
+<link rel="icon" type="image/avif" href="assets-2 copy/CYAN POP.avif" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="https://use.typekit.net/fqc0vdd.css" />
@@ -337,7 +337,7 @@ function renderTable() {
       const { row, nombre, artista, album, precio, wa } = btn.dataset;
       updateStatus(parseInt(row), 'Pagado', btn, () => {
         const msg = encodeURIComponent(
-          `¡Hola ${nombre}! 🎵\n\nTu pago fue confirmado. Tu vinilo está reservado:\n\n*${artista}${album ? ' — ' + album : ''}*\n${precio}\n\nLo recogés personalmente en *FACE A* el *3 de Julio, 2026* — Casa del Ángel, El Retiro.\n\n¡Nos vemos esa noche! — Angelo Studio`
+          `¡Hola ${nombre}! 🎵\n\nTu pago fue confirmado. Tu vinilo está reservado:\n\n*${artista}${album ? ' — ' + album : ''}*\n$${Number(precio).toLocaleString('es-CO')}\n\nLo recogés personalmente en *FACE A* el *3 de Julio, 2026* — Casa del Ángel, El Retiro.\n\n¡Nos vemos esa noche! — Angelo Studio`
         );
         const waUrl = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
           ? `whatsapp://send?phone=${wa}&text=${msg}`
