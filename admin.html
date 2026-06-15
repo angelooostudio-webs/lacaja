@@ -337,7 +337,7 @@ function renderTable() {
       const { row, nombre, artista, album, precio, wa } = btn.dataset;
       updateStatus(parseInt(row), 'Pagado', btn, () => {
         const msg = encodeURIComponent(
-          `¡Hola ${nombre}! 🎵\n\nTu pago fue confirmado. Tu vinilo está reservado:\n\n*${artista}${album ? ' — ' + album : ''}*\n$${Number(precio).toLocaleString('es-CO')}\n\nLo recogés personalmente en *FACE A* el *3 de Julio, 2026* — Casa del Ángel, El Retiro.\n\n¡Nos vemos esa noche! — Angelo Studio`
+          `¡Hola ${nombre}! 🎵\n\nTu pago fue confirmado. Tu vinilo está reservado:\n\n*${artista}${album ? ' — ' + album : ''}*\n${precio}\n\nLo recogés personalmente en *FACE A* el *3 de Julio, 2026* — Casa del Ángel, El Retiro.\n\n¡Nos vemos esa noche! — Angelo Studio`
         );
         const waUrl = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
           ? `whatsapp://send?phone=${wa}&text=${msg}`
