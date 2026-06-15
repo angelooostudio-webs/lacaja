@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Vinilo — FACE A · Angelo Studio</title>
+  <meta name="description" content="Requisitos de vinilo, condiciones de admisión y términos del evento FACE A por Angelo Studio." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Política de Vinilo — FACE A · Angelo Studio" />
+  <meta property="og:description" content="Requisitos de admisión, condiciones del vinilo y términos del evento FACE A. Julio 3, 2026 · El Retiro, Antioquia." />
+  <meta property="og:image"       content="assets-2/FACE RECORD.png" />
+  <meta name="twitter:card"       content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="assets-2/FACE RECORD.png" />
+  <link rel="stylesheet" href="https://use.typekit.net/fqc0vdd.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:  #0a0a0a;
+      --blush:  #E8A898;
+      --cream:  #F5F0E8;
+      --muted:  #7a7060;
+      --border: rgba(245,240,232,0.08);
+      --as-blue: #C8E2F5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: 'DM Mono', 'Courier New', monospace;
+      font-size: 15px;
+      line-height: 1.75;
+      overflow-x: hidden;
+    }
+
+    /* grain */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 250px 250px;
+    }
+
+    /* ── Nav ── */
+    .page-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 3rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-wordmark {
+      font-family: 'spalla', 'DM Mono', monospace;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--as-blue);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .nav-wordmark:hover { opacity: 0.75; }
+    .nav-back {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--blush); }
+
+    /* ── Hero ── */
+    .policy-hero {
+      padding: 5rem 3rem 4rem;
+      border-bottom: 1px solid var(--border);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .policy-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--blush);
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+    .policy-title {
+      font-family: 'spalla', 'DM Mono', monospace;
+      font-size: clamp(2rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--cream);
+      margin-bottom: 1.5rem;
+    }
+    .policy-intro {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.9rem;
+      color: rgba(245,240,232,0.55);
+      max-width: 680px;
+      line-height: 1.8;
+    }
+
+    /* ── Content ── */
+    .policy-body {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 4rem 3rem 6rem;
+    }
+
+    .policy-section {
+      margin-bottom: 4rem;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    .policy-section-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.58rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--blush);
+      opacity: 0.6;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+    .policy-section-heading {
+      font-family: 'spalla', 'DM Mono', monospace;
+      font-size: clamp(1.2rem, 3vw, 1.7rem);
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 1.75rem;
+      line-height: 1.1;
+    }
+
+    .policy-subsection {
+      margin-bottom: 2.5rem;
+    }
+    .policy-subsection-heading {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--blush);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .policy-subsection-heading::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .policy-p {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.88rem;
+      color: rgba(245,240,232,0.65);
+      line-height: 1.85;
+      margin-bottom: 1.25rem;
+    }
+    .policy-p:last-child { margin-bottom: 0; }
+
+    .policy-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+    }
+    .policy-list li {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.88rem;
+      color: rgba(245,240,232,0.65);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      line-height: 1.6;
+    }
+    .policy-list li::before {
+      content: '—';
+      color: var(--blush);
+      opacity: 0.5;
+      flex-shrink: 0;
+    }
+    .policy-list.rejected li::before {
+      content: '✕';
+      color: #c07878;
+      opacity: 0.7;
+      font-size: 0.7rem;
+      margin-top: 0.15em;
+    }
+    .policy-list.accepted li::before {
+      content: '✓';
+      color: #78c098;
+      opacity: 0.8;
+      font-size: 0.8rem;
+      margin-top: 0.05em;
+    }
+
+    /* Alert box */
+    .policy-alert {
+      background: rgba(232,168,152,0.07);
+      border-left: 2px solid var(--blush);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .policy-alert p {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--blush);
+      font-weight: 500;
+      line-height: 1.65;
+    }
+
+    /* Info box */
+    .policy-info {
+      background: rgba(245,240,232,0.03);
+      border: 1px solid var(--border);
+      padding: 1.25rem 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .policy-info p {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.82rem;
+      color: rgba(245,240,232,0.5);
+      line-height: 1.65;
+    }
+
+    /* Payment methods */
+    .payment-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .payment-pill {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--cream);
+      border: 1px solid var(--border);
+      padding: 0.45rem 1rem;
+    }
+
+    /* ── Footer ── */
+    .policy-footer {
+      border-top: 1px solid var(--border);
+      padding: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .policy-footer-left {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .policy-footer-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.5rem;
+    }
+    .policy-footer-wordmark {
+      font-family: 'spalla', 'DM Mono', monospace;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--cream);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      transition: opacity 0.2s;
+    }
+    .policy-footer-wordmark:hover { opacity: 0.7; }
+    .policy-footer-event {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .back-btn {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--black);
+      background: var(--blush);
+      padding: 0.75rem 1.75rem;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .back-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+
+    /* ── Vinyl Ticker ── */
+    .vinyl-ticker {
+      width: 100%;
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 0.9rem 0;
+      background: rgba(10,10,10,0.6);
+    }
+    .vt-track {
+      display: inline-flex;
+      align-items: center;
+      gap: 3.5rem;
+      white-space: nowrap;
+      animation: vtRoll 22s linear infinite;
+      will-change: transform;
+    }
+    @keyframes vtRoll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .vt-vinyl {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      opacity: 0.5;
+      display: block;
+      flex-shrink: 0;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    @media (max-width: 680px) {
+      .page-nav, .policy-hero, .policy-body { padding-left: 1.5rem; padding-right: 1.5rem; }
+      .policy-footer { padding: 2rem 1.5rem; flex-direction: column; align-items: flex-start; }
+      .policy-footer-right { align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav class="page-nav">
+    <a href="https://angelostudio.art" class="nav-wordmark">Angelo Studio</a>
+    <a href="index.html" class="nav-back">← Volver al evento</a>
+  </nav>
+
+  <!-- Vinyl Ticker -->
+  <div class="vinyl-ticker" aria-hidden="true">
+    <div class="vt-track">
+      <img class="vt-vinyl" src="assets-2/DUNE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/GOTH.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/LIGHT BLUE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/POPSICLE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/RECORD MESS.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/DUNE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/GOTH.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/LIGHT BLUE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/POPSICLE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/RECORD MESS.avif" alt="" />
+      <!-- duplicate for seamless loop -->
+      <img class="vt-vinyl" src="assets-2/DUNE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/GOTH.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/LIGHT BLUE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/POPSICLE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/RECORD MESS.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/DUNE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/GOTH.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/LIGHT BLUE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/POPSICLE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/RECORD MESS.avif" alt="" />
+    </div>
+  </div>
+
+  <!-- ── Hero ── -->
+  <div class="policy-hero">
+    <span class="policy-tag">Face A · Política oficial</span>
+    <h1 class="policy-title">Requisitos<br />del Vinilo</h1>
+    <p class="policy-intro">
+      Este documento explica los requisitos de admisión, las condiciones que debe cumplir tu vinilo,
+      el proceso de validación en puerta, y los términos generales del evento.
+      Leélo antes de comprar tu boleta de Entrada Vinilo.
+    </p>
+  </div>
+
+  <!-- ── Body ── -->
+  <div class="policy-body">
+
+    <!-- 1. Estructura de tiquetes -->
+    <div class="policy-section">
+      <span class="policy-section-tag">01</span>
+      <h2 class="policy-section-heading">Estructura de Boletas</h2>
+
+      <div class="policy-subsection">
+        <p class="policy-subsection-heading">Entrada Vinilo — $30.000 COP</p>
+        <p class="policy-p">
+          Para acceder con este tiquete, debés traer un vinilo físico al evento, presentarlo en la entrada para inspección, y asegurarte de que cumpla con todos los requisitos de elegibilidad.
+          Si el vinilo es aprobado, entrás sin ningún cobro adicional.
+        </p>
+      </div>
+
+      <div class="policy-subsection">
+        <p class="policy-subsection-heading">Entrada Estándar — $50.000 COP</p>
+        <p class="policy-p">
+          Boleta de admisión general. No requiere vinilo ni ninguna verificación adicional en la entrada.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2. Validación en puerta -->
+    <div class="policy-section">
+      <span class="policy-section-tag">02</span>
+      <h2 class="policy-section-heading">Validación en Puerta</h2>
+
+      <p class="policy-p">
+        El personal del evento verificará dos cosas en la entrada:
+      </p>
+      <ul class="policy-list">
+        <li>Que el asistente haya traído físicamente un vinilo</li>
+        <li>Que el vinilo cumpla con todos los requisitos de elegibilidad del evento</li>
+      </ul>
+
+      <div class="policy-alert">
+        <p>Si no presentás un vinilo aprobado en la entrada, deberás pagar los $20.000 COP restantes antes de ingresar — o podés retirarte y volver con un disco que cumpla los requisitos.</p>
+      </div>
+
+      <p class="policy-subsection-heading" style="margin-top:2rem;">Métodos de pago en puerta</p>
+      <div class="payment-pills">
+        <span class="payment-pill">QR / Nequi</span>
+        <span class="payment-pill">Transferencia bancaria</span>
+        <span class="payment-pill">Efectivo</span>
+      </div>
+      <p class="policy-p" style="margin-top:1rem;">
+        El ingreso solo se permite una vez confirmado el pago.
+      </p>
+    </div>
+
+    <!-- 3. Requisitos del vinilo -->
+    <div class="policy-section">
+      <span class="policy-section-tag">03</span>
+      <h2 class="policy-section-heading">Requisitos del Vinilo</h2>
+
+      <div class="policy-subsection">
+        <p class="policy-subsection-heading">Estado físico</p>
+        <p class="policy-p">El vinilo debe estar en buen estado y ser reproducible. Los siguientes defectos pueden resultar en rechazo:</p>
+        <ul class="policy-list rejected">
+          <li>Rayones profundos</li>
+          <li>Deformación o alabeo</li>
+          <li>Grietas o fracturas</li>
+          <li>Daño sonoro significativo</li>
+          <li>Desgaste excesivo</li>
+          <li>Cualquier condición que afecte negativamente la reproducción</li>
+        </ul>
+      </div>
+
+      <div class="policy-subsection">
+        <p class="policy-subsection-heading">Contenido aceptado</p>
+        <p class="policy-p">Solo se aceptan álbumes musicales estándar o vinilos de canciones. El disco que traés debe ser música real.</p>
+        <ul class="policy-list accepted">
+          <li>Álbumes de estudio</li>
+          <li>Compilaciones musicales</li>
+          <li>EPs o singles en formato vinilo</li>
+          <li>Cualquier género musical en formato estándar</li>
+        </ul>
+      </div>
+
+      <div class="policy-subsection">
+        <p class="policy-subsection-heading">Categorías NO elegibles</p>
+        <ul class="policy-list rejected">
+          <li>Soundtracks de películas o series</li>
+          <li>Bandas sonoras cinematográficas</li>
+          <li>CDs — solo se aceptan vinilos de 12" o 7"</li>
+          <li>Vinilos de efectos de sonido</li>
+          <li>Discos de palabra hablada o narración</li>
+          <li>Vinilos de entretenimiento no musical</li>
+          <li>Discos novelty o de broma</li>
+        </ul>
+
+        <div class="policy-info">
+          <p>Ejemplos de discos que NO serán aceptados: soundtracks de Stranger Things, Avengers, o cualquier producción similar de cine/televisión. La decisión final sobre elegibilidad está a cargo del personal del evento y es inapelable.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Responsabilidad -->
+    <div class="policy-section">
+      <span class="policy-section-tag">04</span>
+      <h2 class="policy-section-heading">Responsabilidad del Asistente</h2>
+
+      <p class="policy-p">
+        Al adquirir la Entrada Vinilo, el asistente acepta plena responsabilidad por:
+      </p>
+      <ul class="policy-list">
+        <li>Traer físicamente el vinilo al venue</li>
+        <li>Asegurarse de que esté en condición reproducible</li>
+        <li>Verificar que cumpla con los requisitos de contenido antes de llegar</li>
+      </ul>
+
+      <p class="policy-p" style="margin-top:1.25rem;">
+        La organización del evento no asume responsabilidad por:
+      </p>
+      <ul class="policy-list rejected">
+        <li>Vinilos olvidados en casa</li>
+        <li>Vinilos dañados durante el transporte</li>
+        <li>Vinilos rechazados por no cumplir los requisitos</li>
+        <li>Malentendidos sobre las reglas de elegibilidad</li>
+      </ul>
+    </div>
+
+    <!-- 5. Términos generales -->
+    <div class="policy-section">
+      <span class="policy-section-tag">05</span>
+      <h2 class="policy-section-heading">Términos Generales</h2>
+
+      <div class="policy-subsection">
+        <p class="policy-subsection-heading">Boletas no reembolsables</p>
+        <p class="policy-p">
+          Todas las ventas de boletas son finales. Las boletas no son reembolsables bajo ninguna circunstancia.
+          No llegar con un vinilo aprobado no da derecho a reembolso ni reembolso parcial.
+        </p>
+      </div>
+
+      <div class="policy-subsection">
+        <p class="policy-subsection-heading">Negación de ingreso</p>
+        <p class="policy-p">La organización se reserva el derecho de:</p>
+        <ul class="policy-list">
+          <li>Rechazar cualquier vinilo que no cumpla los estándares del evento</li>
+          <li>Exigir el pago del saldo restante antes del ingreso</li>
+          <li>Negar la entrada a asistentes que no cumplan las condiciones</li>
+          <li>Negar reembolsos en todos los escenarios de incumplimiento</li>
+        </ul>
+      </div>
+
+      <div class="policy-alert" style="margin-top:2rem;">
+        <p>Si olvidás tu vinilo, traés uno inelegible, o te negás a pagar el saldo restante, podrías ser negado de ingreso sin derecho a reembolso.</p>
+      </div>
+
+      <div class="policy-info" style="margin-top:1rem;">
+        <p>Las decisiones del personal respecto a la elegibilidad del vinilo son finales y no negociables. Al comprar tu boleta, aceptás todas estas condiciones.</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="back-btn">← Volver al evento</a>
+
+  </div>
+
+  <!-- Vinyl Ticker -->
+  <div class="vinyl-ticker" aria-hidden="true">
+    <div class="vt-track">
+      <img class="vt-vinyl" src="assets-2/BLUE WAVE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/CYAN POP.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/GOLD.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/ORANGE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/WHITE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/BLUE WAVE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/CYAN POP.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/GOLD.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/ORANGE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/WHITE.avif" alt="" />
+      <!-- duplicate for seamless loop -->
+      <img class="vt-vinyl" src="assets-2/BLUE WAVE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/CYAN POP.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/GOLD.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/ORANGE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/WHITE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/BLUE WAVE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/CYAN POP.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/GOLD.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/ORANGE.avif" alt="" />
+      <img class="vt-vinyl" src="assets-2/WHITE.avif" alt="" />
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="policy-footer">
+    <div class="policy-footer-left">
+      Una producción de Angelo Studio<br />
+      El Retiro, Antioquia · Face A · Julio 3, 2026
+    </div>
+    <div class="policy-footer-right">
+      <a href="https://angelostudio.art" class="policy-footer-wordmark">Angelo Studio</a>
+      <span class="policy-footer-event">Face A — Política de Vinilo</span>
+    </div>
+  </footer>
+
+</body>
+</html>
