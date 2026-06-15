@@ -173,6 +173,31 @@ body::before{
   color:var(--muted);white-space:nowrap;
 }
 
+/* OUR PICKS BUTTON */
+@keyframes picks-shift {
+  0%   { color:#FFD166; border-color:#FFD166; box-shadow:0 0 10px rgba(255,209,102,0.45); }
+  33%  { color:#E8A898; border-color:#E8A898; box-shadow:0 0 10px rgba(232,168,152,0.45); }
+  66%  { color:#C8E2F5; border-color:#C8E2F5; box-shadow:0 0 10px rgba(200,226,245,0.45); }
+  100% { color:#FFD166; border-color:#FFD166; box-shadow:0 0 10px rgba(255,209,102,0.45); }
+}
+.picks-btn{
+  font-family:'DM Mono',monospace;font-size:0.65rem;
+  letter-spacing:0.15em;text-transform:uppercase;
+  padding:0.5rem 1.1rem;
+  border:1px solid;
+  background:transparent;
+  cursor:pointer;transition:all 0.18s;
+  animation:picks-shift 3s ease-in-out infinite;
+  flex-shrink:0;
+}
+.picks-btn.active{
+  animation:none;
+  background:#FFD166;
+  color:#0a0a0a !important;
+  border-color:#FFD166 !important;
+  box-shadow:0 0 14px rgba(255,209,102,0.6);
+}
+
 /* TABS */
 .tabs{
   display:flex;border-bottom:1px solid var(--border);
@@ -523,6 +548,7 @@ footer{
       <option value="300000-99999999">+$300k</option>
     </select>
   </div>
+  <button class="picks-btn" id="picksBtn">Our Picks</button>
   <span class="count-label" id="countLabel">— registros</span>
 </div>
 
@@ -1597,6 +1623,9 @@ let activeTab = 'available';
 let activeFormat = 'all';
 let activePrice = 'all';
 let searchQ = '';
+let activeOurPicks = false;
+
+const OUR_PICKS = new Set([243,271,433,469,549,594,613,629,643,669,727,730,760,786,790,806,814,828,854,894]);
 
 function fmtCOP(n) {
   return '$' + n.toLocaleString('es-CO');
@@ -1612,6 +1641,7 @@ function matchesFilters(r) {
   const isSold = !!soldMap[id];
   if (activeTab === 'available' && isSold) return false;
   if (activeTab === 'sold' && !isSold) return false;
+  if (activeOurPicks && !OUR_PICKS.has(id)) return false;
   if (activeFormat !== 'all' && formato !== activeFormat) return false;
   if (activePrice !== 'all') {
     const [lo, hi] = activePrice.split('-').map(Number);
@@ -1691,6 +1721,12 @@ let searchTimer;
 document.getElementById('searchInput').addEventListener('input', e => {
   clearTimeout(searchTimer);
   searchTimer = setTimeout(() => { searchQ = e.target.value.trim(); render(); }, 180);
+});
+
+document.getElementById('picksBtn').addEventListener('click', () => {
+  activeOurPicks = !activeOurPicks;
+  document.getElementById('picksBtn').classList.toggle('active', activeOurPicks);
+  render();
 });
 
 // ── FIELD WATCHERS — show payment summary when all filled ────────────────────
